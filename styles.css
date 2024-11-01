@@ -1,0 +1,138 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 10%;
+    background-color: #f4f4f4;
+}
+
+/* Navigation styling */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em 0;
+}
+
+header nav a {
+    color: #333;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a.active,
+header nav a:hover {
+    color: #00ffcc;
+}
+
+/* Intro section */
+.intro {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.intro p {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Highlighted section headers */
+h2 {
+    font-size: 1.8em;
+    margin-top: 2em;
+    display: inline-block;
+    background: #ffeb3b;
+    padding: 0.2em 0.5em;
+}
+
+/* Latest posts styling */
+.latest-posts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.latest-posts li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0;
+}
+
+.latest-posts a {
+    color: #333;
+    text-decoration: none;
+}
+
+.latest-posts a:hover {
+    color: #00ffcc;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.all-posts-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border: 2px solid #333;
+    background: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.all-posts-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Featured projects styling */
+.featured-projects .project-grid {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: calc(50% - 1em); /* Adjust based on number of projects per row */
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+}
+
+.project-card p {
+    color: #555;
+    font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2em;
+}
