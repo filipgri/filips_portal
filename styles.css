@@ -1,138 +1,218 @@
-/* Reset basic styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     font-family: Arial, sans-serif;
-    color: #333;
     line-height: 1.6;
-    padding: 0 10%;
-    background-color: #f4f4f4;
 }
 
-/* Navigation styling */
-header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1em 0;
+nav {
+    text-align: right;
+    margin-bottom: 50px;
 }
 
-header nav a {
-    color: #333;
-    margin: 0 1em;
+nav a {
+    margin-left: 20px;
     text-decoration: none;
-    font-weight: bold;
+    color: black;
 }
 
-header nav a.active,
-header nav a:hover {
-    color: #00ffcc;
+nav a.active {
+    color: #00ff9d;
 }
 
-/* Intro section */
-.intro {
-    margin: 2em 0;
+main {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 100px 0 20px 0;
+    color: #333;
     text-align: center;
 }
 
-.intro h1 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.intro p {
-    margin-top: 0.5em;
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Highlighted section headers */
-h2 {
-    font-size: 1.8em;
-    margin-top: 2em;
+h1 .word {
     display: inline-block;
-    background: #ffeb3b;
-    padding: 0.2em 0.5em;
+    opacity: 0;
+    position: relative;
 }
 
-/* Latest posts styling */
-.latest-posts ul {
-    list-style-type: none;
-    padding: 0;
+h1 .word.visible {
+    opacity: 1;
+    border-bottom: 4px solid #00ff9d;
 }
 
-.latest-posts li {
+h2 {
+    display: inline-block;
+    background-color: rgba(0, 255, 128, 0.4);  /* Light green with transparency */
+    padding: 5px 10px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    position: relative;
+}
+
+/* Remove the ::after pseudo-element since we're using background directly */
+h2::after {
+    display: none;
+}
+
+.intro-text {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.intro-text .word {
+    display: inline-block;
+    opacity: 0;
+    margin-right: 5px;
+}
+
+.intro-text .word.visible {
+    opacity: 1;
+    background-color: rgba(0, 255, 128, 0.4);
+    padding: 0 5px;
+}
+
+.section {
+    text-align: left;
+    margin-top: 60px;
+}
+
+/* Ensure the h2 displays properly in sections */
+.section h2 {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.posts-list {
+    margin-bottom: 20px;
+}
+
+.post {
     display: flex;
     justify-content: space-between;
-    margin: 0.5em 0;
-}
-
-.latest-posts a {
-    color: #333;
-    text-decoration: none;
-}
-
-.latest-posts a:hover {
-    color: #00ffcc;
+    margin-bottom: 15px;
 }
 
 .date {
-    color: #888;
-    font-size: 0.9em;
+    color: #666;
 }
 
-.all-posts-button {
-    display: inline-block;
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    border: 2px solid #333;
+.all-posts-btn {
+    border: 1px solid black;
     background: none;
-    font-size: 1em;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 60px;
 }
 
-.all-posts-button:hover {
-    background-color: #333;
-    color: #fff;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-/* Featured projects styling */
-.featured-projects .project-grid {
-    display: flex;
-    gap: 1em;
-    flex-wrap: wrap;
-    margin-top: 1em;
+.project img {
+    width: 100%;
+    height: auto;
 }
 
-.project-card {
-    background-color: #fff;
-    padding: 1em;
-    border: 1px solid #ddd;
+.project h3 {
+    margin-top: 10px;
+}
+
+/* Publications page styles */
+.publication-list {
+    margin-top: 2em;
+}
+
+.publication-item {
+    background: white;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
     border-radius: 8px;
-    text-align: center;
-    width: calc(50% - 1em); /* Adjust based on number of projects per row */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.project-card img {
-    max-width: 100%;
-    border-radius: 4px;
+.publication-item h3 {
+    color: #333;
     margin-bottom: 0.5em;
 }
 
-.project-card p {
-    color: #555;
-    font-weight: bold;
+.authors {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5em;
 }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #333;
-    color: #fff;
+.journal {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.paper-link {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.paper-link:hover {
+    color: #00ffcc;
+}
+
+/* Bio section styles */
+.bio-content {
+    display: flex;
+    gap: 2em;
     margin-top: 2em;
 }
+
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+.title-section {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.title-section h1 {
+    margin: 0;
+    text-align: right;
+}
+
+.profile-photo {
+    margin-top: 0;
+    margin-right: 60px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+    flex: 1;
+}
+
+.bio-text p {
+    margin-bottom: 1em;
+} 

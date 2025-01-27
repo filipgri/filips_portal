@@ -5,53 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filip's Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="publications.html">Publications</a>
-            <a href="projects.html">Projects&Bio</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects&Bio</a>
+    </nav>
 
     <main>
-        <section class="intro">
-            <h1>Hi! I'm Filip, a design researcher.</h1>
-            <p>Welcome to my personal website! I'm based in London. This site showcases my work, projects, and interests</p>
-        </section>
-
-        <section class="latest-posts">
-            <h2>Latest Posts</h2>
-            <ul>
-                <li><a href="#">Post Title 1</a> <span class="date">22nd September, 2024</span></li>
-                <li><a href="#">Post Title 2</a> <span class="date">20th July, 2024</span></li>
-                <li><a href="#">Post Title 3</a> <span class="date">2nd July, 2024</span></li>
-                <li><a href="#">Post Title 4</a> <span class="date">26th June, 2024</span></li>
-                <li><a href="#">Post Title 5</a> <span class="date">17th June, 2024</span></li>
-            </ul>
-            <button class="all-posts-button">All posts →</button>
-        </section>
-
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <p>Project Title 1</p>
-                </div>
-                <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2">
-                    <p>Project Title 2</p>
-                </div>
-                <!-- Add more project cards as needed -->
+        <div class="header-container">
+            <div class="title-section">
+                <h1>
+                    <span class="word">Hi!</span>
+                    <span class="word">I'm</span>
+                    <span class="word">Filip,</span>
+                    <span class="word">a</span>
+                    <span class="word">design</span>
+                    <span class="word">researcher.</span>
+                </h1>
             </div>
-        </section>
+            <div class="profile-photo">
+                <img src="https://picsum.photos/200" alt="Profile photo" class="profile-image">
+            </div>
+        </div>
+        
+        <p class="intro-text">
+            <span class="word">I'm</span>
+            <span class="word">based</span>
+            <span class="word">in</span>
+            <span class="word">London.</span>
+            <span class="word">You</span>
+            <span class="word">will</span>
+            <span class="word">find</span>
+            <span class="word">my</span>
+            <span class="word">work,</span>
+            <span class="word">projects,</span>
+            <span class="word">and</span>
+            <span class="word">interests</span>
+            <span class="word">here.</span>
+
+        <div class="section">
+            <h2>Latest Posts</h2>
+            <div class="posts-list">
+                <div class="post">
+                    <span>Post Title 1</span>
+                    <span class="date">22nd September, 2024</span>
+                </div>
+                <div class="post">
+                    <span>Post Title 2</span>
+                    <span class="date">20th July, 2024</span>
+                </div>
+                <div class="post">
+                    <span>Post Title 3</span>
+                    <span class="date">2nd July, 2024</span>
+                </div>
+                <div class="post">
+                    <span>Post Title 4</span>
+                    <span class="date">26th June, 2024</span>
+                </div>
+                <div class="post">
+                    <span>Post Title 5</span>
+                    <span class="date">17th June, 2024</span>
+                </div>
+            </div>
+            <button class="all-posts-btn">All posts →</button>
+        </div>
+
+        <div class="section">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                </div>
+                <div class="project">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Filip. All rights reserved.</p>
-    </footer>
 </body>
-</html>
-
+</html> 
